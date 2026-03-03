@@ -113,8 +113,8 @@ def draw_player(surface, x, y, facing_right=True, frame=0):
     flip = 1 if facing_right else -1
     seed = _wobble_seed + int(x) + int(y)
 
-    # Animation: leichtes Wippen
-    bob = math.sin(frame * 0.15) * 1.5
+    # Animation: schnelles Wippen (Mario-artig)
+    bob = math.sin(frame * 0.35) * 2.0
 
     # Spitzhut (Dreieck)
     hat_top = (cx + flip * 2, y - 4 + bob)
@@ -137,8 +137,8 @@ def draw_player(surface, x, y, facing_right=True, frame=0):
     body_bot_r = (cx + 9, y + 34 + bob)
     wobbly_polygon(surface, PENCIL_COLOR, [body_top_l, body_top_r, body_bot_r, body_bot_l], 2, seed + 100)
 
-    # Beine
-    walk_cycle = math.sin(frame * 0.3) * 4
+    # Beine (schnellere Laufanimation)
+    walk_cycle = math.sin(frame * 0.6) * 6
     leg_y = y + 34 + bob
     # Linkes Bein
     wobbly_line(surface, PENCIL_COLOR,

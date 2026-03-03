@@ -9,15 +9,15 @@ TITLE = "Skizzenwelt"
 # Tile / Grid
 TILE_SIZE = 40
 
-# Physik
-GRAVITY = 0.6
-MAX_FALL_SPEED = 12
-PLAYER_SPEED = 4
-PLAYER_JUMP_FORCE = -11
-COYOTE_TIME = 6          # Frames nach Plattformkante, in denen Sprung noch möglich
-JUMP_BUFFER = 8           # Frames vor Landung, in denen Sprung vorgemerkt wird
-FART_BOOST = -9           # Aufwärtskraft des Furz-Schubs
-FART_COOLDOWN = 180       # 3 Sekunden bei 60 FPS
+# Physik (Mario-artig: schnell, snappy, hoher Sprung)
+GRAVITY = 0.75
+MAX_FALL_SPEED = 14
+PLAYER_SPEED = 6
+PLAYER_JUMP_FORCE = -13
+COYOTE_TIME = 7           # Frames nach Plattformkante, in denen Sprung noch möglich
+JUMP_BUFFER = 10          # Frames vor Landung, in denen Sprung vorgemerkt wird
+FART_BOOST = -11          # Aufwärtskraft des Furz-Schubs
+FART_COOLDOWN = 150       # 2.5 Sekunden bei 60 FPS
 INVULNERABILITY_FRAMES = 90  # 1.5 Sekunden Unverwundbarkeit
 
 # Spieler
@@ -25,17 +25,17 @@ PLAYER_WIDTH = 24
 PLAYER_HEIGHT = 44
 PLAYER_MAX_HP = 3
 
-# Gegner
-WALKER_SPEED = 1.5
-JUMPER_SPEED = 1.5
-JUMPER_JUMP_INTERVAL = 120   # Frames zwischen Sprüngen
-JUMPER_JUMP_FORCE = -9
-FLYER_SPEED = 1.2
-FLYER_AMPLITUDE = 40        # Sinuswellen-Amplitude
-FLYER_FREQUENCY = 0.03      # Sinuswellen-Frequenz
+# Gegner (schneller, Mario-artig)
+WALKER_SPEED = 2.5
+JUMPER_SPEED = 2.5
+JUMPER_JUMP_INTERVAL = 100   # Frames zwischen Sprüngen
+JUMPER_JUMP_FORCE = -11
+FLYER_SPEED = 2.0
+FLYER_AMPLITUDE = 45        # Sinuswellen-Amplitude
+FLYER_FREQUENCY = 0.035     # Sinuswellen-Frequenz
 
 # Plattformen
-MOVING_PLATFORM_SPEED = 1.5
+MOVING_PLATFORM_SPEED = 2.0
 FALLING_PLATFORM_SHAKE_TIME = 30   # Frames wackeln vor Fall
 FALLING_PLATFORM_RESET_TIME = 180  # Frames bis Neuerscheinung
 
